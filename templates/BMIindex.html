@@ -1,0 +1,61 @@
+<!doctype html>
+
+<head>
+	<title>
+	BMI Calculator
+	</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}"></link>
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous"></link>
+</head>
+
+<h1> Body Mass Index Calculator </h1>
+
+
+<body class="main">
+
+
+<div> 
+	<p>Please enter your information below:</p>
+	
+	<form class="pure-form" method="POST" action="/">
+	Name: <br>
+	<input type="text" name="username"><br>
+	Height (cm): <br>
+	<input type="number" step="0.01" name="userheight"><br>
+	Weight (lbs): <br>
+	<input type="number" step="0.01" name="userweight"><br>
+	<button type="submit" class="pure-button pure-button-primary" value="Submit">Calculate</button>
+	</form>
+</div>
+<div id="chart">
+new LineChart({
+  data, // some array of data objects
+  width: 600,
+  height: 200,
+  target: '#chart',
+  area: true,
+  xAccessor: 'date',
+  yAccessor: 'value'
+})
+
+
+</div>
+
+
+<br>
+<div>
+	{% if username and height and weightlbs %}
+		
+		<p>Hello {{ username }}</p>
+		<p>The height entered is: {{ height }} cm</p>
+		<p>The weight entered is: {{ weightlbs }} lbs</p>
+		<p>The weight in kilograms is {{ weightkg }} kg</p>
+		<p>Your BMI is {{ bmi }}</p>
+	
+	{% endif %}	
+
+</div>
+
+</body>
+
+	

@@ -1,0 +1,66 @@
+<!doctype html>
+<div class="pure-menu pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading pure-menu-link">15 layer Model Inputs</a>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+            <a href="#" class="pure-menu-link">Simple Model Inputs</a>
+        </li>
+        <li class="pure-menu-item">
+            <a href="#" class="pure-menu-link">Resistivity to Hk Creator</a>
+        </li>
+        <li class="pure-menu-item">
+            <a href="#" class="pure-menu-link">About</a>
+        </li>
+    </ul>
+</div>
+<head>
+	<title>
+	Welcome Flask App
+	</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"></link>
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous"></link>
+</head>
+
+<h1>Fifteen Layer Modflow USG Model Inputs Page </h1>
+
+
+<body class="main">
+
+	<p>Inputs:</p>
+	
+
+</body>
+
+	<form class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="aligned-name">Well Name</label>
+            <input type="text" id="aligned-name" placeholder="Well 1" />
+        </div>        
+		<div class="pure-control-group">
+            <label for="aligned-foo">Pumping Rate </label>
+            <input type="text" id="aligned-foo" placeholder="gpm" />
+        </div>
+		 </div>
+        <div class="pure-control-group">
+            <label for="aligned-foo">Sy </label>
+            <input type="text" id="aligned-foo" placeholder="0.2" />
+        </div>
+		 </div>
+        <div class="pure-control-group">
+            <label for="aligned-foo">Transmissivity</label>
+            <input type="text" id="aligned-foo" placeholder="300 (feet)" />
+        </div>
+		 </div>
+        <div class="pure-control-group">
+            <label for="aligned-foo">Aquifer Thickness</label>
+            <input type="text" id="aligned-foo" placeholder="400 (feet)" />
+        </div>
+		 </div>
+        <div class="pure-controls">
+            <label for="aligned-cb" class="pure-checkbox">
+                <input type="checkbox" id="aligned-cb" /> Use PEST to optimize??</label>
+            <button type="submit" class="pure-button pure-button-primary">Run MODFLOW</button>
+        </div>
+    </fieldset>
+</form>
